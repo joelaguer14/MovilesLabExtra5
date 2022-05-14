@@ -100,7 +100,7 @@ class CrudPersonas : AppCompatActivity() {
                             persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password, personas.getPersonas()[position].nombre, personas.getPersonas()[position].foto)
 
                             val i = Intent(this@CrudPersonas, EditPersonaForm::class.java)
-                            i.putExtra("msg", "MENSAJE DE Login al Menú")
+                            i.putExtra("position", position)
                             i.putExtra("Persona",persona)
                             startActivity(i)
 
