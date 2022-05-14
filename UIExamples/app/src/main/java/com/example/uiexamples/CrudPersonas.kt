@@ -40,6 +40,9 @@ class CrudPersonas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crud_personas)
 
+
+
+
         val searchIcon = findViewById<ImageView>(R.id.search_mag_icon)
         searchIcon.setColorFilter(Color.BLACK)
 
@@ -135,10 +138,10 @@ class CrudPersonas : AppCompatActivity() {
 
 
         val add: FloatingActionButton = findViewById(R.id.add)
-        add.setOnClickListener { view ->
-            Toast.makeText(this, "Dentro del botón flotante", Toast.LENGTH_SHORT).show()
-            Snackbar.make(view, "Botón para insertar", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        add.setOnClickListener {
+            val intent = Intent(this, CreatePersonForm::class.java)
+
+            startActivity(intent)
         }
 
 
