@@ -11,15 +11,15 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
+    <activity
+        android:id="@+id/nav_personas"
         android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="Personas"
+        tools:layout="@layout/activity_crud_personas" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_logout"
         android:name="com.example.uiexamples.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="Logout"
+        tools:layout="@layout/activity_login_example" />
 </navigation>

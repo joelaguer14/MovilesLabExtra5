@@ -45,12 +45,7 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Toast.makeText(this, "Dentro del botón flotante", Toast.LENGTH_SHORT).show()
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -58,7 +53,7 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_personas, R.id.nav_logout
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -86,29 +81,15 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                     .commit()
 
             }
-            R.id.nav_gallery -> {
-                galleryFragment = GalleryFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.nav_host_fragment, galleryFragment)
-                    .addToBackStack(null)
-                    .commit()
 
-            }
-            R.id.nav_slideshow -> {
-                slideshowFragment = SlideshowFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.nav_host_fragment, slideshowFragment)
-                    .addToBackStack(null)
-                    .commit()
-            }
             R.id.nav_personas -> {
                 val i = Intent(this, CrudPersonas::class.java)
                 startActivity(i)
             }
+            R.id.nav_logout -> {
+            val i = Intent(this, LoginExample::class.java)
+            startActivity(i)
+        }
         }
         return true
     }
