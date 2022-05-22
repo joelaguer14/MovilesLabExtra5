@@ -68,6 +68,10 @@ class Personas private constructor() {
         return null
     }
 
+    fun getPosition(p: Persona?): Int?{
+        return personas.indexOf(p)
+    }
+
     fun deletePerson(position: Int){
         personas!!.removeAt(position)
     }
