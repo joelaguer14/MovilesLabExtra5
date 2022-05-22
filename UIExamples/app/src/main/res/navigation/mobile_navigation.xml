@@ -22,4 +22,9 @@
         android:name="com.example.uiexamples.ui.slideshow.SlideshowFragment"
         android:label="Logout"
         tools:layout="@layout/activity_login_example" />
+    <fragment
+            android:id="@+id/nav_job_app"
+            android:name="com.example.uiexamples.ui.slideshow.SlideshowFragment"
+            android:label="JobApp"
+            tools:layout="@layout/job_application_fragment" />
 </navigation>

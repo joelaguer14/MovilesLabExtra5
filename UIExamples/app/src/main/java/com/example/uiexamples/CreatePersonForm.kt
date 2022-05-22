@@ -15,10 +15,17 @@ class CreatePersonForm : AppCompatActivity() {
         val user =  findViewById<EditText>(R.id.textUsername)
         val password =  findViewById<EditText>(R.id.textPassword)
         val save =  findViewById<Button>(R.id.saveButton)
+        val id =  findViewById<EditText>(R.id.textID)
+        val address =  findViewById<EditText>(R.id.TextAddress)
+        val email =  findViewById<EditText>(R.id.TextEmailAddress)
+        val phone =  findViewById<EditText>(R.id.TextPhone)
+        val profile =  findViewById<EditText>(R.id.TextProfile)
+
 
         save.setOnClickListener{
             val intent = Intent(this, CrudPersonas::class.java)
-            val person = Persona(user = user.text.toString(), password = password.text.toString(), nombre = name.text.toString(),foto =  R.drawable.foto01)
+            val person = Persona(user = user.text.toString(), password = password.text.toString(), nombre = name.text.toString(),id=id.text.toString(),
+                address=address.text.toString(),  email = email.text.toString(), phone = phone.text.toString(), profile=profile.text.toString(),foto =  R.drawable.foto02)
             personas.addPersona(person)
             startActivity(intent)
         }

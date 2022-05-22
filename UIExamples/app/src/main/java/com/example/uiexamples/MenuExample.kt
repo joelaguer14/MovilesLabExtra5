@@ -18,15 +18,14 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.uiexamples.ui.gallery.GalleryFragment
 import com.example.uiexamples.ui.home.HomeFragment
 import com.example.uiexamples.ui.slideshow.SlideshowFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 
 
-class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
+class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var homeFragment: HomeFragment
+    private lateinit var jobAppFragment: JobApplicationFragment
     private lateinit var galleryFragment: GalleryFragment
     private lateinit var slideshowFragment: SlideshowFragment
 
@@ -36,7 +35,7 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
 
         val bundle = intent.extras
         val msg = bundle!!.getString("msg")
-        val l =  bundle.getSerializable("Login") as Persona
+        val l = bundle.getSerializable("Login") as Persona
 
         if (msg != null) {
             Toast.makeText(this, "$msg ${l.nombre} ${l.password}", Toast.LENGTH_SHORT).show()
@@ -70,7 +69,7 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId){
+        when (item.itemId) {
             R.id.nav_home -> {
                 homeFragment = HomeFragment()
                 supportFragmentManager
@@ -87,12 +86,23 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(i)
             }
             R.id.nav_logout -> {
-            val i = Intent(this, LoginExample::class.java)
-            startActivity(i)
-        }
+                val i = Intent(this, LoginExample::class.java)
+                startActivity(i)
+            }
+            R.id.nav_job_app -> {
+                jobAppFragment = JobApplicationFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .replace(R.id.nav_host_fragment, jobAppFragment)
+                    .addToBackStack(null)
+                    .commit()
+
+            }
         }
         return true
     }
+
     override fun onBackPressed() {
         val fragments = supportFragmentManager.backStackEntryCount
         if (fragments == 1) {
