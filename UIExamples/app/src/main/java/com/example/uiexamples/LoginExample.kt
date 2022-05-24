@@ -42,6 +42,7 @@ class LoginExample : AppCompatActivity() {
                     i.putExtra("msg", "MENSAJE DE Login al Menú")
                     i.putExtra("Login", Login)
 
+                    finish()
                     startActivity(i)
                 }
                 else{
@@ -50,6 +51,8 @@ class LoginExample : AppCompatActivity() {
                     val position = personas.getPosition(persona)
                     i.putExtra("position", position)
                     i.putExtra("Persona",persona)
+
+                    finish()
                     startActivity(i)
                 }
             }else{

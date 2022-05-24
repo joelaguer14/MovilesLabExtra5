@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import org.w3c.dom.Text
 
 class JobApplicationFragment : Fragment() {
 
@@ -19,6 +21,16 @@ class JobApplicationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        var view = inflater.inflate(R.layout.job_application_fragment,container,false)
+        var sentPerson = arguments?.getSerializable("Login")
+        println(sentPerson.toString())
+        if (sentPerson != null){
+            println("persona no nula")
+          var persona = sentPerson as Persona
+          view.findViewById<TextView>(R.id.textID).setText(persona.id)
+
+        }
         return inflater.inflate(R.layout.job_application_fragment, container, false)
     }
 

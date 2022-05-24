@@ -88,7 +88,8 @@ class CrudPersonas : AppCompatActivity() {
                         position = viewHolder.adapterPosition
 
                         if(direction == ItemTouchHelper.LEFT){
-                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password, personas.getPersonas()[position].nombre, personas.getPersonas()[position].foto)
+                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
+                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
                             personas.deletePerson(position)
                             lista.adapter?.notifyItemRemoved(position)
 
@@ -100,7 +101,8 @@ class CrudPersonas : AppCompatActivity() {
                             lista.adapter = adaptador
                         }else{
                             val bundle = Bundle()
-                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password, personas.getPersonas()[position].nombre, personas.getPersonas()[position].foto)
+                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
+                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
 
                             val i = Intent(this@CrudPersonas, EditPersonaForm::class.java)
                             i.putExtra("position", position)

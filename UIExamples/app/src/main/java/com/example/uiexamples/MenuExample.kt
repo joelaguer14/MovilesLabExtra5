@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -71,14 +72,8 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
 
         when (item.itemId) {
             R.id.nav_home -> {
-                homeFragment = HomeFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.nav_host_fragment, homeFragment)
-                    .addToBackStack(null)
-                    .commit()
-
+                setToolbarTittle("Home")
+                changeFragment(HomeFragment())
             }
 
             R.id.nav_personas -> {
@@ -86,18 +81,13 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(i)
             }
             R.id.nav_logout -> {
+                finish()
                 val i = Intent(this, LoginExample::class.java)
                 startActivity(i)
             }
             R.id.nav_job_app -> {
-                jobAppFragment = JobApplicationFragment()
-                supportFragmentManager
-                    .beginTransaction()
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.nav_host_fragment, jobAppFragment)
-                    .addToBackStack(null)
-                    .commit()
-
+                setToolbarTittle("Job Application")
+                changeFragment(JobApplicationFragment())
             }
         }
         return true
@@ -116,4 +106,12 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+    private fun setToolbarTittle(title:String){
+        supportActionBar?.title = title
+    }
+    private fun changeFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,fragment).commit()
+    }
+
 }

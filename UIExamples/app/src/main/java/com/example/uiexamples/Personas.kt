@@ -7,8 +7,8 @@ class Personas private constructor() {
     private var personas: ArrayList<Persona> = ArrayList<Persona>()
 
     init{
-        addPersona(Persona("mar", "123","Marcos", R.drawable.foto01))
-        addPersona(Persona("jul", "123", "Julia", R.drawable.foto02))
+        addPersona(Persona("mar", "123","Marcos","116880486" ,"santa Ana","m@gmail.com","60021119","junior dev",R.drawable.foto01))
+        /*addPersona(Persona("jul", "123", "Julia", R.drawable.foto02))
         addPersona(Persona("cam", "123", "Camilo", R.drawable.foto03))
         addPersona(Persona("lui", "123", "Luis", R.drawable.foto04))
         addPersona(Persona("cel", "123", "Celia", R.drawable.foto05))
@@ -20,7 +20,7 @@ class Personas private constructor() {
         addPersona(Persona("mon", "123", "Monica", R.drawable.foto04))
         addPersona(Persona("dan", "123", "Daniel", R.drawable.foto05))
         addPersona(Persona("sar", "123", "Sara", R.drawable.foto06))
-        addPersona(Persona("san", "123", "Santiago", R.drawable.foto07))
+        addPersona(Persona("san", "123", "Santiago", R.drawable.foto07))*/
     }
 
     private object HOLDER {
