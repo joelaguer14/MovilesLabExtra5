@@ -7,7 +7,7 @@ class Personas private constructor() {
     private var personas: ArrayList<Persona> = ArrayList<Persona>()
 
     init{
-        addPersona(Persona("mar", "123","Marcos","116880486" ,"santa Ana","m@gmail.com","60021119","junior dev",R.drawable.foto01))
+        addPersona(Persona("mar", "123","Marcos","116880486" ,"santa Ana","m@gmail.com","60021119","junior dev",R.drawable.foto01,"22/09/1997","junior Dev"))
         /*addPersona(Persona("jul", "123", "Julia", R.drawable.foto02))
         addPersona(Persona("cam", "123", "Camilo", R.drawable.foto03))
         addPersona(Persona("lui", "123", "Luis", R.drawable.foto04))

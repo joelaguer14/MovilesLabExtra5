@@ -89,7 +89,9 @@ class CrudPersonas : AppCompatActivity() {
 
                         if(direction == ItemTouchHelper.LEFT){
                             persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
-                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
+                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto,
+                                personas.getPersonas()[position].startDate,personas.getPersonas()[position].position)
+
                             personas.deletePerson(position)
                             lista.adapter?.notifyItemRemoved(position)
 
@@ -102,7 +104,9 @@ class CrudPersonas : AppCompatActivity() {
                         }else{
                             val bundle = Bundle()
                             persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
-                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
+                                personas.getPersonas()[position].address,personas.getPersonas()[position].email,personas.getPersonas()[position].phone,personas.getPersonas()[position].profile,personas.getPersonas()[position].foto,
+                                personas.getPersonas()[position].startDate,personas.getPersonas()[position].position)
+
 
                             val i = Intent(this@CrudPersonas, EditPersonaForm::class.java)
                             i.putExtra("position", position)

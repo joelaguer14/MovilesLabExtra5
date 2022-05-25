@@ -35,12 +35,9 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         setContentView(R.layout.activity_menu_example)
 
         val bundle = intent.extras
-        val msg = bundle!!.getString("msg")
-        val l = bundle.getSerializable("Login") as Persona
+        val l = bundle?.getSerializable("Login") as Persona
 
-        if (msg != null) {
-            Toast.makeText(this, "$msg ${l.nombre} ${l.password}", Toast.LENGTH_SHORT).show()
-        }
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -86,8 +83,12 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(i)
             }
             R.id.nav_job_app -> {
-                setToolbarTittle("Job Application")
-                changeFragment(JobApplicationFragment())
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+                val i = Intent(this, JobAppView::class.java)
+                i.putExtra("Persona",l)
+                finish()
+                startActivity(i)
             }
         }
         return true

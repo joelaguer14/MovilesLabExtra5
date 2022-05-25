@@ -25,7 +25,7 @@ class CreatePersonForm : AppCompatActivity() {
         save.setOnClickListener{
             val intent = Intent(this, CrudPersonas::class.java)
             val person = Persona(user = user.text.toString(), password = password.text.toString(), nombre = name.text.toString(),id=id.text.toString(),
-                address=address.text.toString(),  email = email.text.toString(), phone = phone.text.toString(), profile=profile.text.toString(),foto =  R.drawable.foto02)
+                address=address.text.toString(),  email = email.text.toString(), phone = phone.text.toString(), profile=profile.text.toString(),foto =  R.drawable.foto02,"22","33")
             personas.addPersona(person)
             startActivity(intent)
         }

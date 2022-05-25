@@ -39,7 +39,6 @@ class LoginExample : AppCompatActivity() {
                     val bundle = Bundle()
                     val Login = personas.loginP(user_name.toString(), password.toString())
                     val i = Intent(this, MenuExample::class.java)
-                    i.putExtra("msg", "MENSAJE DE Login al Menú")
                     i.putExtra("Login", Login)
 
                     finish()
