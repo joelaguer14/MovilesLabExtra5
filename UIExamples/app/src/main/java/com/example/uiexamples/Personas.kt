@@ -7,7 +7,8 @@ class Personas private constructor() {
     private var personas: ArrayList<Persona> = ArrayList<Persona>()
 
     init{
-        addPersona(Persona("mar", "123","Marcos","116880486" ,"santa Ana","m@gmail.com","60021119","junior dev",R.drawable.foto01,"22/09/1997","junior Dev"))
+        addPersona(Persona("joel", "123","Joel","116620535" ,"Puris","joel@gmail.com","212121212","admin",R.drawable.foto02,"22/09/1999","junior Dev"))
+        addPersona(Persona("alo", "123","Alonso","116880486" ,"santa Ana","alonso@gmail.com","60021119","viewer",R.drawable.foto01,"22/09/1997","senior Dev"))
         /*addPersona(Persona("jul", "123", "Julia", R.drawable.foto02))
         addPersona(Persona("cam", "123", "Camilo", R.drawable.foto03))
         addPersona(Persona("lui", "123", "Luis", R.drawable.foto04))
@@ -81,5 +82,11 @@ class Personas private constructor() {
         aux.password = p.password
         aux.nombre = p.nombre
         aux.user = p.user
+        aux.startDate = p.startDate
+        aux.email = p.email
+        aux.address = p.address
+        aux.id = p.id
+        aux.phone = p.phone
+        aux.position = p.position
     }
 }

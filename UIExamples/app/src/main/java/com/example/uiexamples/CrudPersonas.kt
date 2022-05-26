@@ -108,7 +108,7 @@ class CrudPersonas : AppCompatActivity() {
                                 personas.getPersonas()[position].startDate,personas.getPersonas()[position].position)
 
 
-                            val i = Intent(this@CrudPersonas, EditPersonaForm::class.java)
+                            val i = Intent(this@CrudPersonas, JobAppEditForm::class.java)
                             i.putExtra("position", position)
                             i.putExtra("Persona",persona)
                             startActivity(i)

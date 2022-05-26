@@ -38,7 +38,7 @@ class JobAppView : AppCompatActivity() {
         tvdate.text = l.startDate
 
         back.setOnClickListener{
-            val bundle = Bundle()
+
             val i = Intent(this, MenuExample::class.java)
             i.putExtra("Login", l)
             finish()
