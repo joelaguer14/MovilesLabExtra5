@@ -4,30 +4,37 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="#88AAEB"
         android:layout_height="match_parent"
-        tools:context=".CreatePersonForm">
+        tools:context=".CreatePersonForm"
+        android:background="@drawable/blue">
 
     <TextView
-            android:text="Crear Trabajador"
+            android:text="Create Job App"
             android:textSize="35dp"
+            android:textColor="#C2C2C3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView6"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.026"/>
     <EditText
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/textName"
+            android:background="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.121" android:hint="Name..."/>
     <EditText
+            android:textColor="@color/black"
+            android:background="@color/white"
+
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPersonName"
@@ -38,6 +45,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.415" android:hint="ID..."/>
     <EditText
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPersonName"
@@ -48,6 +57,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.218" android:hint="Username..."/>
     <EditText
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPassword"
@@ -59,6 +70,8 @@
             app:layout_constraintVertical_bias="0.315" android:hint="Password..."/>
     <Button
 
+            android:backgroundTint="#AFAFAF"
+            android:textColor="@color/black"
             android:text="Save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/saveButton"
@@ -67,7 +80,8 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
-
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPostalAddress"
@@ -75,10 +89,11 @@
             android:id="@+id/TextAddress"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.52" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.819" app:layout_constraintBottom_toBottomOf="parent"
             android:hint="Address..."/>
     <EditText
-
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textEmailAddress"
@@ -87,24 +102,28 @@
             android:hint="mail@example.com"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.623"/>
+            app:layout_constraintVertical_bias="0.617"/>
     <EditText
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/TextPhone"
-            android:hint="Phone Number" app:layout_constraintTop_toTopOf="parent"
+            android:hint="Phone Number..." app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.732"/>
-    <EditText
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.719"/>
+    <AutoCompleteTextView
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
-            android:inputType="textPersonName"
-            android:text="admin"
-            android:ems="10"
             android:id="@+id/TextProfile"
+            android:hint="Profile..."
+            android:ems="10"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.832"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,21 +7,15 @@ class Personas private constructor() {
     private var personas: ArrayList<Persona> = ArrayList<Persona>()
 
     init{
-        addPersona(Persona("joel", "123","Joel","116620535" ,"Puris","joel@gmail.com","212121212","admin",R.drawable.foto02,"22/09/1999","junior Dev"))
-        addPersona(Persona("alo", "123","Alonso","116880486" ,"santa Ana","alonso@gmail.com","60021119","viewer",R.drawable.foto01,"22/09/1997","senior Dev"))
-        /*addPersona(Persona("jul", "123", "Julia", R.drawable.foto02))
-        addPersona(Persona("cam", "123", "Camilo", R.drawable.foto03))
-        addPersona(Persona("lui", "123", "Luis", R.drawable.foto04))
-        addPersona(Persona("cel", "123", "Celia", R.drawable.foto05))
-        addPersona(Persona("jes", "123", "Jessica", R.drawable.foto06))
-        addPersona(Persona("reb", "123", "Rebeca", R.drawable.foto07))
-        addPersona(Persona("ari", "123","Ariana", R.drawable.foto01))
-        addPersona(Persona("cri", "123", "Cristian", R.drawable.foto02))
-        addPersona(Persona("nic", "123", "Nicole", R.drawable.foto03))
-        addPersona(Persona("mon", "123", "Monica", R.drawable.foto04))
-        addPersona(Persona("dan", "123", "Daniel", R.drawable.foto05))
-        addPersona(Persona("sar", "123", "Sara", R.drawable.foto06))
-        addPersona(Persona("san", "123", "Santiago", R.drawable.foto07))*/
+        addPersona(Persona("joel", "123","Joel","116620535" ,"Puris","joel@gmail.com","212121212","admin",R.drawable.foto03,"22/09/2019","junior Dev"))
+        addPersona(Persona("alo", "123","Alonso","116880486" ,"santa Ana","alonso@gmail.com","60021119","viewer",R.drawable.foto01,"22/09/2018","senior Dev"))
+        addPersona(Persona("jua", "123","Juana","445566778" ,"Alajuelita","juana@gmail.com","8844551100","viewer",R.drawable.foto07,"22/09/2015","web Dev"))
+        addPersona(Persona("luis", "123","Luis","334455667" ,"San Carlos","Luis@gmail.com","87502641","viewer",R.drawable.foto04,"22/09/2020","android Dev"))
+        addPersona(Persona("jen", "123","Jennifer","224455667" ,"Perez Zeledon","jen@gmail.com","86574103","admin",R.drawable.foto05,"22/09/2021","full stack Dev"))
+        addPersona(Persona("cris", "123","Cristina","113344556" ,"Cartago","cris@gmail.com","64521036","viewer",R.drawable.foto02,"22/09/2007","DBA"))
+        addPersona(Persona("haz", "123","Hazel","223344556" ,"Heredia","Haz@gmail.com","68752103","admin",R.drawable.foto07,"22/09/2022","Cloud Manager"))
+        addPersona(Persona("car", "123","Carlos","112233445" ,"Alajuela","car@gmail.com","70324968","viewer",R.drawable.foto06,"22/09/2000","CyberSecurity SeniorManager"))
+
     }
 
     private object HOLDER {
