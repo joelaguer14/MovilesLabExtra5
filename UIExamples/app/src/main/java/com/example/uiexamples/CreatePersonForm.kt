@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uiexamples.model.Persona
+import com.example.uiexamples.model.Personas
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -25,14 +27,11 @@ class CreatePersonForm : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.textPassword)
         val save = findViewById<Button>(R.id.saveButton)
         val id = findViewById<EditText>(R.id.textID)
-        val address = findViewById<EditText>(R.id.TextAddress)
-        val email = findViewById<EditText>(R.id.TextEmailAddress)
-        val phone = findViewById<EditText>(R.id.TextPhone)
+
         val profile = findViewById<AutoCompleteTextView>(R.id.TextProfile)
 
         cargarAutoCompleteTextView()
-        val current = LocalDateTime.now()
-        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+
 
         save.setOnClickListener {
             val intent = Intent(this, CrudPersonas::class.java)
@@ -41,12 +40,8 @@ class CreatePersonForm : AppCompatActivity() {
                 password = password.text.toString(),
                 nombre = name.text.toString(),
                 id = id.text.toString(),
-                address = address.text.toString(),
-                email = email.text.toString(),
-                phone = phone.text.toString(),
                 profile = profile.text.toString(),
-                foto = R.drawable.foto02, startDate = current.format(formatter),
-                position = "Mobile Developer"
+                foto = R.drawable.foto02
             )
             personas.addPersona(person)
             startActivity(intent)

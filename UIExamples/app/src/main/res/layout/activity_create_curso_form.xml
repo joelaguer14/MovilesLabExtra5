@@ -5,11 +5,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CreatePersonForm"
+        tools:context=".CreateCursoForm"
         android:background="@drawable/blue">
 
     <TextView
-            android:text="Create User"
+            android:text="Create Curso"
             android:textSize="35dp"
             android:textColor="#C2C2C3"
             android:layout_width="wrap_content"
@@ -25,12 +25,12 @@
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/textName"
+            android:id="@+id/textCodigoCurso"
             android:background="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.121" android:hint="Name..."/>
+            app:layout_constraintVertical_bias="0.121" android:hint="Code..."/>
     <EditText
             android:textColor="@color/black"
             android:background="@color/white"
@@ -39,11 +39,11 @@
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/textID"
+            android:id="@+id/textNombreCurso"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.555" android:hint="ID..."/>
+            app:layout_constraintVertical_bias="0.555" android:hint="Name..."/>
     <EditText
             android:background="@color/white"
             android:textColor="@color/black"
@@ -51,44 +51,33 @@
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/textUsername"
+            android:id="@+id/textCredits"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.264" android:hint="Username..."/>
+            app:layout_constraintVertical_bias="0.264" android:hint="Credits..."/>
     <EditText
             android:background="@color/white"
             android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:ems="10"
-            android:id="@+id/textPassword"
+            android:id="@+id/textHoras"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.418" android:hint="Password..."/>
+            app:layout_constraintVertical_bias="0.418" android:hint="Hours..."/>
     <Button
 
             android:backgroundTint="#AFAFAF"
             android:textColor="@color/black"
             android:text="Save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/saveButton"
+            android:layout_width="114dp"
+            android:layout_height="61dp" android:id="@+id/saveButton"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.877"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.751"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintEnd_toEndOf="parent"/>
-    <AutoCompleteTextView
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
-            android:id="@+id/TextProfile"
-            android:hint="Profile..."
-            android:ems="10"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.714"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.uiexamples.model.Persona
+import com.example.uiexamples.model.Personas
 
 class JobAppView : AppCompatActivity() {
     var personas: Personas = Personas.instance
@@ -31,11 +33,7 @@ class JobAppView : AppCompatActivity() {
 
         tvusername.text = l.nombre
         tvuserId.text = l.id
-        tvaddress.text = l.address
-        tvemail.text = l.email
-        tvphone.text = l.phone
-        tvposition.text = l.position
-        tvdate.text = l.startDate
+
 
         back.setOnClickListener{
 

@@ -18,23 +18,23 @@ import com.google.android.material.snackbar.Snackbar
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 import java.util.*
 import android.content.Intent
-import com.example.uiexamples.model.Persona
-import com.example.uiexamples.model.Personas
+import com.example.uiexamples.model.Curso
+import com.example.uiexamples.model.Cursos
 import kotlin.collections.ArrayList
 
-class CrudPersonas : AppCompatActivity() {
+class CrudCursos : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
-    var personas: Personas = Personas.instance
+    var cursos: Cursos = Cursos.instance
 
     lateinit var lista:RecyclerView
-    lateinit var adaptador:RecyclerView_Adapter
-    lateinit var persona: Persona
-    var archived = ArrayList<Persona>()
+    lateinit var adaptador:RecyclerView_AdapterCursos
+    lateinit var curso: Curso
+    var archived = ArrayList<Curso>()
     var position: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crud_personas)
+        setContentView(R.layout.activity_crud_cursos)
 
 
 
@@ -50,11 +50,11 @@ class CrudPersonas : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.search_src_text)
         textView.setTextColor(Color.BLACK)
 
-        lista = findViewById(R.id.lista)
+        lista = findViewById(R.id.listaCourses)
         lista.layoutManager = LinearLayoutManager(lista.context)
         lista.setHasFixedSize(true)
 
-        findViewById<SearchView>(R.id.person_search).setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        findViewById<SearchView>(R.id.course_search).setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
@@ -72,7 +72,7 @@ class CrudPersonas : AppCompatActivity() {
                         val fromPosition: Int = viewHolder.adapterPosition
                         val toPosition: Int = target.adapterPosition
 
-                        Collections.swap(personas.getPersonas(), fromPosition, toPosition)
+                        Collections.swap(cursos.getCursos(), fromPosition, toPosition)
 
                         lista.adapter?.notifyItemMoved(fromPosition, toPosition)
 
@@ -84,33 +84,33 @@ class CrudPersonas : AppCompatActivity() {
                         position = viewHolder.adapterPosition
 
                         if(direction == ItemTouchHelper.LEFT){
-                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
-                                personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
+                            curso = Curso(cursos.getCursos()[position].codigo, cursos.getCursos()[position].nombre,
+                                cursos.getCursos()[position].creditos ,cursos.getCursos()[position].horas)
 
-                            personas.deletePerson(position)
+                            cursos.deleteCurso(position)
                             lista.adapter?.notifyItemRemoved(position)
 
-                            Snackbar.make(lista, persona.nombre + "Se eliminó...", Snackbar.LENGTH_LONG).setAction("Undo") {
-                                personas.getPersonas().add(position, persona)
+                            Snackbar.make(lista, curso.nombre + "Se eliminó...", Snackbar.LENGTH_LONG).setAction("Undo") {
+                                cursos.getCursos().add(position, curso)
                                 lista.adapter?.notifyItemInserted(position)
                             }.show()
-                            adaptador = RecyclerView_Adapter(personas.getPersonas())
+                            adaptador = RecyclerView_AdapterCursos(cursos.getCursos())
                             lista.adapter = adaptador
                         }else{
                             val bundle = Bundle()
-                            persona = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
-                                personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
+                            curso = Curso(cursos.getCursos()[position].codigo, cursos.getCursos()[position].nombre,
+                                cursos.getCursos()[position].creditos ,cursos.getCursos()[position].horas)
 
 
-                            val i = Intent(this@CrudPersonas, JobAppEditForm::class.java)
+                            val i = Intent(this@CrudCursos, JobAppEditForm::class.java)
                             i.putExtra("position", position)
-                            i.putExtra("Persona",persona)
+                            i.putExtra("Curso",curso)
                             startActivity(i)
 
 
 
 
-                            adaptador = RecyclerView_Adapter(personas.getPersonas())
+                            adaptador = RecyclerView_AdapterCursos(cursos.getCursos())
                             lista.adapter = adaptador
                             //getListOfPersons()
                         }
@@ -118,10 +118,10 @@ class CrudPersonas : AppCompatActivity() {
 
                     override fun onChildDraw(c: Canvas, recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, dX: Float, dY: Float, actionState: Int, isCurrentlyActive: Boolean) {
 
-                        RecyclerViewSwipeDecorator.Builder(this@CrudPersonas, c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                            .addSwipeLeftBackgroundColor(ContextCompat.getColor(this@CrudPersonas, R.color.red))
+                        RecyclerViewSwipeDecorator.Builder(this@CrudCursos, c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                            .addSwipeLeftBackgroundColor(ContextCompat.getColor(this@CrudCursos, R.color.red))
                             .addSwipeLeftActionIcon(R.drawable.ic_baseline_delete_24)
-                            .addSwipeRightBackgroundColor(ContextCompat.getColor(this@CrudPersonas, R.color.green))
+                            .addSwipeRightBackgroundColor(ContextCompat.getColor(this@CrudCursos, R.color.green))
                             .addSwipeRightActionIcon(R.drawable.ic_baseline_edit_24)
                             .create()
                             .decorate()
@@ -139,7 +139,7 @@ class CrudPersonas : AppCompatActivity() {
 
         val add: FloatingActionButton = findViewById(R.id.add)
         add.setOnClickListener {
-            val intent = Intent(this, CreatePersonForm::class.java)
+            val intent = Intent(this, CreateCursoForm::class.java)
 
             startActivity(intent)
         }
@@ -148,11 +148,11 @@ class CrudPersonas : AppCompatActivity() {
     }
 
     private fun getListOfPersons() {
-        val Npersonas = ArrayList<Persona>()
-        for (p in personas.getPersonas()) {
-            Npersonas.add(p)
+        val Ncursos = ArrayList<Curso>()
+        for (p in cursos.getCursos()) {
+            Ncursos.add(p)
         }
-        adaptador = RecyclerView_Adapter(Npersonas)
+        adaptador = RecyclerView_AdapterCursos(Ncursos)
         lista.adapter = adaptador
     }
 }

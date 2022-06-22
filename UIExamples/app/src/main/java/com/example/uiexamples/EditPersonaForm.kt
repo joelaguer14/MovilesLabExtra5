@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.uiexamples.model.Persona
+import com.example.uiexamples.model.Personas
 import com.example.uiexamples.ui.Login
 
 

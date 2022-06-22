@@ -11,8 +11,13 @@
         <entry key="..\:/Users/Alonso Calderon/Desktop/Semestre Actual/Moviles/labextra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/job_app_view.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Alonso Calderon/Desktop/Semestre Actual/Moviles/labextra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/job_application_fragment.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Alonso Calderon/Desktop/UIExamples/app/src/main/res/layout/activity_edit_persona_form.xml" value="0.21784420289855072" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/drawable/ic_baseline_accessibility_24.xml" value="0.20625" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/drawable/ic_baseline_list.xml" value="0.20625" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_create_curso_form.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_create_person_form.xml" value="0.22" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_crud_cursos.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_crud_personas.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_curso_edit_form.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_edit_persona_form.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_job_app_edit_form.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/activity_login_example.xml" value="0.35260416666666666" />
@@ -28,6 +33,7 @@
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/logout_fragment.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/layout/nav_header_main.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/menu/menu_example.xml" value="0.2046875" />
         <entry key="..\:/Users/Joela/UNA/CicloI2022/Moviles/Labs/LabExtra/LabExtra5/MovilesLabExtra5/UIExamples/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19010416666666666" />
       </map>
     </option>

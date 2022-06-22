@@ -10,12 +10,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.uiexamples.model.Persona
 import com.example.uiexamples.ui.gallery.GalleryFragment
 import com.example.uiexamples.ui.home.HomeFragment
 import com.example.uiexamples.ui.slideshow.SlideshowFragment

@@ -13,7 +13,11 @@
         <item
             android:id="@+id/nav_personas"
             android:icon="@drawable/ic_baseline_list"
-            android:title="Personas" />
+            android:title="Usuarios" />
+        <item
+                android:id="@+id/nav_cursos"
+                android:icon="@drawable/ic_baseline_list"
+                android:title="Cursos" />
         <item
                 android:id="@+id/nav_job_app"
                 android:icon="@drawable/ic_baseline_profile"

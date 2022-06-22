@@ -5,14 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Filter
+import android.widget.Filterable
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uiexamples.model.Curso
 import com.example.uiexamples.model.Persona
-import kotlin.collections.ArrayList
 
-class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
+class RecyclerView_AdapterCursos(private var items: ArrayList<Curso>): RecyclerView.Adapter<RecyclerView.ViewHolder>(),
+    Filterable {
 
-    var itemsList: ArrayList<Persona>? = null
+    var itemsList: ArrayList<Curso>? = null
 
     lateinit var mcontext: Context
 
@@ -23,8 +27,8 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val personListView = LayoutInflater.from(parent.context).inflate(R.layout.templatepersonas, parent, false)
-        val sch = PersonHolder(personListView)
+        val courseListView = LayoutInflater.from(parent.context).inflate(R.layout.templatepersonas, parent, false)
+        val sch = PersonHolder(courseListView)
         mcontext = parent.context
         return sch
     }
@@ -36,12 +40,12 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = itemsList?.get(position)
         holder.itemView.findViewById<TextView>(R.id.tvNombre)?.text = item?.nombre
-        holder.itemView.findViewById<ImageView>(R.id.ivFoto).setImageResource(item?.foto!!)
+
 
         holder.itemView.setOnClickListener {
-           // val intent = Intent(mcontext, MainActivity::class.java)
-           // intent.putExtra("passselectedcountry", itemsList?.get(position))
-          //  mcontext.startActivity(intent)
+            // val intent = Intent(mcontext, MainActivity::class.java)
+            // intent.putExtra("passselectedcountry", itemsList?.get(position))
+            //  mcontext.startActivity(intent)
             Log.d("Selected:", itemsList?.get(position)?.nombre.toString())
 
         }
@@ -55,7 +59,7 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
                 if (charSearch.isEmpty()) {
                     itemsList = items
                 } else {
-                    val resultList = ArrayList<Persona>()
+                    val resultList = ArrayList<Curso>()
                     for (row in items) {
                         if (row.nombre.toLowerCase().contains(charSearch.toLowerCase())) {
                             resultList.add(row)
@@ -70,11 +74,10 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
 
             @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                itemsList = results?.values as ArrayList<Persona>
+                itemsList = results?.values as ArrayList<Curso>
                 notifyDataSetChanged()
             }
 
         }
     }
 }
-

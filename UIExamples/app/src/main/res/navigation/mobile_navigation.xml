@@ -14,8 +14,13 @@
     <activity
         android:id="@+id/nav_personas"
         android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
-        android:label="Personas"
+        android:label="Usuarios"
         tools:layout="@layout/activity_crud_personas" />
+    <activity
+            android:id="@+id/nav_cursos"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Cursos"
+            tools:layout="@layout/activity_crud_cursos" />
 
     <fragment
         android:id="@+id/nav_logout"

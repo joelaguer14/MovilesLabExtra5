@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.uiexamples.model.Persona
+import com.example.uiexamples.model.Personas
 
 class JobAppEditForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,22 +29,14 @@ class JobAppEditForm : AppCompatActivity() {
 
         name.setText(recivedPerson.nombre)
         id.setText(recivedPerson.id)
-        addres.setText(recivedPerson.address)
-        pos.setText(recivedPerson.position)
-        startDate.setText(recivedPerson.startDate)
-        email.setText(recivedPerson.email)
-        phone.setText(recivedPerson.phone)
+
 
 
         save.setOnClickListener{
 
             recivedPerson.nombre = name.text.toString()
             recivedPerson.id = id.text.toString()
-            recivedPerson.address = addres.text.toString()
-            recivedPerson.position = pos.text.toString()
-            recivedPerson.startDate = startDate.text.toString()
-            recivedPerson.email = email.text.toString()
-            recivedPerson.phone = phone.text.toString()
+
             personas.editPerson(recivedPerson,position)
 
             val i = Intent(this, CrudPersonas::class.java)

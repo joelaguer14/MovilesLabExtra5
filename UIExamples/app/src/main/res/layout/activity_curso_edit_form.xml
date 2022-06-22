@@ -12,7 +12,7 @@
     <TextView
             android:layout_width="298dp"
             android:layout_height="wrap_content"
-            android:text="Edit User"
+            android:text="Edit Curso"
             android:id="@+id/signin"
             android:textColor="#B1B2B4"
             android:textSize="30dp"
