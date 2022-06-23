@@ -18,11 +18,6 @@ class JobAppEditForm : AppCompatActivity() {
         val recivedPerson =  bundle.getSerializable("Persona") as Persona
         val name =  findViewById<EditText>(R.id.editTextPersonName)
         val id =  findViewById<EditText>(R.id.editTextPersonId)
-        val addres =  findViewById<EditText>(R.id.editTextPersonAddres)
-        val pos =  findViewById<EditText>(R.id.editTextPersonPosition)
-        val startDate =  findViewById<EditText>(R.id.editTextPersonStartDate)
-        val email =  findViewById<EditText>(R.id.editTextPersonEmail)
-        val phone =  findViewById<EditText>(R.id.editTextPersonPhone)
         val save =  findViewById<Button>(R.id.saveButton)
 
 
