@@ -1,6 +1,8 @@
 package com.example.uiexamples.model
 
-class Ciclo {
+import java.io.Serializable
+
+class Ciclo: Serializable {
     var annio:String = ""
     var numero:String = ""
     var fechaInicio:String = ""

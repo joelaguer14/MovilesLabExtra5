@@ -97,15 +97,16 @@ class CrudCiclos : AppCompatActivity() {
                     adaptador = RecyclerView_AdapterCiclos(ciclos.getCiclos())
                     lista.adapter = adaptador
                 }else{
-                   // val bundle = Bundle()
-                   // ciclo = Persona(personas.getPersonas()[position].user, personas.getPersonas()[position].password,personas.getPersonas()[position].nombre ,personas.getPersonas()[position].id,
-                    //    personas.getPersonas()[position].profile,personas.getPersonas()[position].foto)
+                    val bundle = Bundle()
+                    ciclo = Ciclo(ciclos.getCiclos()[position].annio, ciclos.getCiclos()[position].numero,ciclos.getCiclos()[position].fechaInicio ,ciclos.getCiclos()[position].fechaFin,
+                        ciclos.getCiclos()[position].estado)
 
 
-                   // val i = Intent(this@CrudPersonas, JobAppEditForm::class.java)
-                   // i.putExtra("position", position)
-                   // i.putExtra("Persona",persona)
-                   // startActivity(i)
+                    val i = Intent(this@CrudCiclos, EditCicloForm::class.java)
+                    i.putExtra("position", position)
+                    i.putExtra("Ciclo",ciclo)
+                    startActivity(i)
+                    finish()
 
 
 
@@ -139,9 +140,10 @@ class CrudCiclos : AppCompatActivity() {
 
         val add: FloatingActionButton = findViewById(R.id.add)
         add.setOnClickListener {
-            val intent = Intent(this, CreatePersonForm::class.java)
+            val intent = Intent(this, CreateCicloForm::class.java)
 
             startActivity(intent)
+            finish()
         }
 
 

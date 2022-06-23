@@ -10,6 +10,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.UIExamples">
         <activity
+                android:name=".EditCursoForm"
+                android:exported="true"/>
+        <activity
+                android:name=".EditCicloForm"
+                android:exported="true"/>
+        <activity
+                android:name=".CreateCicloForm"
+                android:exported="true"/>
+        <activity
                 android:name=".CrudCiclos"
                 android:exported="true"/>
         <activity

@@ -30,9 +30,7 @@ class CreateCursoForm : AppCompatActivity() {
         val save = findViewById<Button>(R.id.saveButton)
         val hours = findViewById<EditText>(R.id.textHoras)
 
-        val profile = findViewById<AutoCompleteTextView>(R.id.TextProfile)
 
-//        cargarAutoCompleteTextView()
 
 
         save.setOnClickListener {
@@ -45,6 +43,7 @@ class CreateCursoForm : AppCompatActivity() {
             )
             cursos.addCurso(curso)
             startActivity(intent)
+            finish()
         }
 
     }

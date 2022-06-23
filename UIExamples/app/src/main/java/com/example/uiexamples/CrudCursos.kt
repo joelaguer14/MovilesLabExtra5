@@ -101,7 +101,7 @@ class CrudCursos : AppCompatActivity() {
                                 cursos.getCursos()[position].creditos ,cursos.getCursos()[position].horas)
 
 
-                            val i = Intent(this@CrudCursos, JobAppEditForm::class.java)
+                            val i = Intent(this@CrudCursos, EditCursoForm::class.java)
                             i.putExtra("position", position)
                             i.putExtra("Curso",curso)
                             startActivity(i)
