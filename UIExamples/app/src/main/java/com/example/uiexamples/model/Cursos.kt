@@ -45,24 +45,6 @@ class Cursos private constructor() {
         return this.cursos!!
     }
 
-//    fun login(user: String?, password: String?): Boolean{
-//        for(c: Curso in cursos!!){
-//            if(c.user.equals(user) && c.password.equals(password)){
-//                return true
-//            }
-//        }
-//        return false
-//    }
-//
-//    fun loginP(user: String?, password: String?): Curso?{
-//        for(c: Curso in cursos!!){
-//            if(c.user.equals(user) && c.password.equals(password)){
-//                return c
-//            }
-//        }
-//        return null
-//    }
-
     fun getPosition(p: Curso?): Int?{
         return cursos.indexOf(p)
     }

@@ -86,7 +86,7 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
             }
             R.id.nav_logout -> {
                 finish()
-                val i = Intent(this, CrudCiclos::class.java)
+                val i = Intent(this, CrudCursos::class.java)
                 startActivity(i)
             }
             R.id.nav_job_app -> {

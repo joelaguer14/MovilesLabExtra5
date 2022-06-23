@@ -13,7 +13,10 @@
                 android:name=".CrudCiclos"
                 android:exported="true"/>
         <activity
-                android:name=".ui.CrudCiclos"
+                android:name=".CrudCursos"
+                android:exported="true"/>
+        <activity
+                android:name=".CreateCursoForm"
                 android:exported="true"/>
         <activity
                 android:name=".JobAppEditForm"

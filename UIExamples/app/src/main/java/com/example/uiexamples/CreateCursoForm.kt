@@ -24,7 +24,7 @@ class CreateCursoForm : AppCompatActivity() {
         setContentView(R.layout.activity_create_curso_form)
 
         var cursos: Cursos = Cursos.instance
-        val name = findViewById<EditText>(R.id.textName)
+        val name = findViewById<EditText>(R.id.textNombreCurso)
         val code = findViewById<EditText>(R.id.textCodigoCurso)
         val creditos = findViewById<EditText>(R.id.textCredits)
         val save = findViewById<Button>(R.id.saveButton)

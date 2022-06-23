@@ -29,7 +29,6 @@ class CrudCursos : AppCompatActivity() {
     lateinit var lista:RecyclerView
     lateinit var adaptador:RecyclerView_AdapterCursos
     lateinit var curso: Curso
-    var archived = ArrayList<Curso>()
     var position: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,11 +136,11 @@ class CrudCursos : AppCompatActivity() {
 
 
 
-        val add: FloatingActionButton = findViewById(R.id.add)
+        val add: FloatingActionButton = findViewById(R.id.addCourse)
         add.setOnClickListener {
             val intent = Intent(this, CreateCursoForm::class.java)
-
             startActivity(intent)
+            finish()
         }
 
 
