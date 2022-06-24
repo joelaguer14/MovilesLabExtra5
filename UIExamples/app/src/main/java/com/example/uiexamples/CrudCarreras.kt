@@ -96,17 +96,16 @@ class CrudCarreras : AppCompatActivity() {
                     adaptador = RecyclerView_AdapterCarreras(carreras.getCarreras())
                     lista.adapter = adaptador
                 }else{
-                   /* val bundle = Bundle()
-                    ciclo = Ciclo(ciclos.getCiclos()[position].annio, ciclos.getCiclos()[position].numero,ciclos.getCiclos()[position].fechaInicio ,ciclos.getCiclos()[position].fechaFin,
-                        ciclos.getCiclos()[position].estado)
+                    val bundle = Bundle()
+                    carrera = Carrera(carreras.getCarreras()[position].codigo, carreras.getCarreras()[position].nombre,carreras.getCarreras()[position].titulo)
 
 
-                    val i = Intent(this@CrudCiclos, EditCicloForm::class.java)
+                    val i = Intent(this@CrudCarreras, EditCarreraForm::class.java)
                     i.putExtra("position", position)
-                    i.putExtra("Ciclo",ciclo)
+                    i.putExtra("Carrera",carrera)
                     startActivity(i)
-                    finish()
-                    */
+
+
 
 
 
@@ -138,7 +137,7 @@ class CrudCarreras : AppCompatActivity() {
 
         val add: FloatingActionButton = findViewById(R.id.add)
         add.setOnClickListener {
-            val intent = Intent(this, CreateCicloForm::class.java)
+            val intent = Intent(this, CreateCarreraForm::class.java)
 
             startActivity(intent)
             finish()

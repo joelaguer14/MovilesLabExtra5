@@ -47,16 +47,5 @@ class CreateCursoForm : AppCompatActivity() {
         }
 
     }
-//
-//    private fun cargarAutoCompleteTextView() {
-//        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.TextProfile)
-//        val profiles: Array<String> = arrayOf("admin", "viewer")
-//        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, profiles)
-//        autoCompleteTextView.threshold = 0
-//        autoCompleteTextView.setAdapter(adapter)
-//        autoCompleteTextView.setOnFocusChangeListener({ view, b -> if (b) autoCompleteTextView.showDropDown() })
-//
-//
-//    }
 
 }

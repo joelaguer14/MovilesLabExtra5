@@ -32,9 +32,9 @@ class Cursos private constructor() {
         cursos?.add(curso)
     }
 
-    fun getCurso(nombre: String): Curso? {
+    fun getCurso(codigo: String): Curso? {
         for (c: Curso in cursos!!){
-            if(c.nombre.equals(nombre)){
+            if(c.codigo.equals(codigo)){
                 return c;
             }
         }

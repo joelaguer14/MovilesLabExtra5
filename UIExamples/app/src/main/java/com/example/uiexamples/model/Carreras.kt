@@ -57,4 +57,9 @@ class Carreras {
         aux.nombre = c.nombre
         aux.titulo = c.titulo
     }
+    fun addCourse(c: Curso, position: Int){
+        var aux = carreras!!.get(position)
+        aux.courseList.add(c)
+
+    }
 }

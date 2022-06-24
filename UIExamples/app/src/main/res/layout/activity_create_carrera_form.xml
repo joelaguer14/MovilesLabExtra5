@@ -9,7 +9,7 @@
         android:background="@drawable/blue">
 
     <TextView
-            android:text="Crear Ciclos"
+            android:text="Crear Carreras"
             android:textSize="35dp"
             android:textColor="#C2C2C3"
             android:layout_width="wrap_content"
@@ -23,50 +23,40 @@
             android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
-            android:inputType="number"
+            android:inputType="text"
             android:ems="10"
-            android:id="@+id/et_annio"
+            android:id="@+id/et_codigo"
             android:background="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.121" android:hint="Año..."/>
-    <AutoCompleteTextView
+            app:layout_constraintVertical_bias="0.121" android:hint="Código..."/>
+
+    <EditText
             android:background="@color/white"
             android:textColor="@color/black"
             android:layout_width="309dp"
+            android:inputType="text"
             android:layout_height="50dp"
-            android:id="@+id/atv_numero"
-            android:hint="Número..."
+            android:id="@+id/et_nombre"
+            android:hint="Nombre..."
             android:ems="10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.272"/>
+            app:layout_constraintVertical_bias="0.316"/>
     <EditText
             android:background="@color/white"
             android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
-            android:inputType="date"
+            android:inputType="text"
             android:ems="10"
-            android:id="@+id/et_fechainicio"
+            android:id="@+id/et_titulo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.428" android:hint="Fecha Inicio..."/>
-    <EditText
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
-            android:inputType="date"
-            android:ems="10"
-            android:id="@+id/et_fehcafin"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.594" android:hint="Fecha Fin..."/>
+            app:layout_constraintVertical_bias="0.499" android:hint="Título..."/>
     <Button
 
             android:backgroundTint="#AFAFAF"
