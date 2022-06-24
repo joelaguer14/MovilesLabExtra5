@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -36,7 +35,6 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
 
         val bundle = intent.extras
         val l = bundle?.getSerializable("Login") as Persona
-
 
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -76,31 +74,60 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
             R.id.nav_personas -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-                if (l.profile == "admin") {
-                    val i = Intent(this, CrudPersonas::class.java)
-                    startActivity(i)
-                }else{
-                    Toast.makeText(this, "Acces denied!!",
-                        Toast.LENGTH_LONG).show();
-                }
-            }
-            R.id.nav_logout -> {
-                val i = Intent(this, CrudCarreras::class.java)
+
+                val i = Intent(this, CrudPersonas::class.java)
                 startActivity(i)
+
             }
-            R.id.nav_job_app -> {
+            R.id.nav_profesores -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-                if (l.profile == "viewer") {
-                val i = Intent(this, JobAppView::class.java)
-                i.putExtra("Persona",l)
-                finish()
+
+                val i = Intent(this, CrudProfesores::class.java)
                 startActivity(i)
-                }else{
-                    Toast.makeText(this, "Acces denied!!",
-                        Toast.LENGTH_LONG).show();
-                }
+
             }
+            R.id.nav_ciclos -> {
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                val i = Intent(this, CrudCiclos::class.java)
+                startActivity(i)
+
+            }
+            R.id.nav_cursos -> {
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                val i = Intent(this, CrudCursos::class.java)
+                startActivity(i)
+            }
+            R.id.nav_carreras -> {
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                val i = Intent(this, CrudCarreras::class.java)
+                startActivity(i)
+
+            }
+            R.id.nav_logout -> {
+                val i = Intent(this, LoginExample::class.java)
+                startActivity(i)
+                finish()
+            }
+//            R.id.nav_job_app -> {
+//                val bundle = intent.extras
+//                val l = bundle?.getSerializable("Login") as Persona
+//                if (l.profile == "viewer") {
+//                val i = Intent(this, JobAppView::class.java)
+//                i.putExtra("Persona",l)
+//                finish()
+//                startActivity(i)
+//                }else{
+//                    Toast.makeText(this, "Acces denied!!",
+//                        Toast.LENGTH_LONG).show();
+//                }
+//            }
         }
         return true
     }
@@ -119,11 +146,12 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    private fun setToolbarTittle(title:String){
+    private fun setToolbarTittle(title: String) {
         supportActionBar?.title = title
     }
-    private fun changeFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,fragment).commit()
+
+    private fun changeFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit()
     }
 
 }

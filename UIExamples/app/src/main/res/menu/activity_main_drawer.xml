@@ -19,6 +19,19 @@
                 android:icon="@drawable/ic_baseline_list"
                 android:title="Cursos" />
         <item
+                android:id="@+id/nav_carreras"
+                android:icon="@drawable/ic_baseline_list"
+                android:title="Carreras" />
+        <item
+            android:id="@+id/nav_ciclos"
+            android:icon="@drawable/ic_baseline_list"
+            android:title="Ciclos" />
+        <item
+                android:id="@+id/nav_profesores"
+                android:icon="@drawable/ic_baseline_list"
+                android:title="Profesores" />
+
+        <item
                 android:id="@+id/nav_job_app"
                 android:icon="@drawable/ic_baseline_profile"
                 android:title="Job Application Info" />

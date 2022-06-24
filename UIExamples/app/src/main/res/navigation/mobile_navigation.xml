@@ -21,6 +21,21 @@
             android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
             android:label="Cursos"
             tools:layout="@layout/activity_crud_cursos" />
+    <activity
+            android:id="@+id/nav_carreras"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Cursos"
+            tools:layout="@layout/activity_crud_carreras" />
+    <activity
+            android:id="@+id/nav_ciclos"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Cursos"
+            tools:layout="@layout/activity_crud_ciclos" />
+    <activity
+            android:id="@+id/nav_profesores"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Cursos"
+            tools:layout="@layout/activity_crud_profesores" />
 
     <fragment
         android:id="@+id/nav_logout"

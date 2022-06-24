@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".EditProfesorForm"
+        android:background="@drawable/blue">
+    <TextView
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:text="Editar Profesor"
+            android:id="@+id/signin"
+            android:textColor="#B1B2B4"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp" android:layout_marginStart="50dp" android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+    />
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_annio"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/signin"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:hint="Código"
+                android:id="@+id/et_codigo"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_numero"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tl_annio"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="text"
+                android:id="@+id/et_nombre"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_fechaInicio"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tl_numero"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Créditos"
+                android:inputType="number"
+                android:id="@+id/et_creditos"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_fechaFin"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tl_fechaInicio"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Horas Semanales"
+                android:inputType="number"
+                android:id="@+id/et_horas"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButton"
+            android:layout_below="@+id/tl_fechaFin"
+            android:backgroundTint="#AFAFAF"
+            android:layout_centerHorizontal="true"
+            android:text="SAVE"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/black"
+    />
+</RelativeLayout>
