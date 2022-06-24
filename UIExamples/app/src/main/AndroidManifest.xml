@@ -10,6 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.UIExamples">
         <activity
+                android:name=".CreateCarreraForm"
+                android:exported="true"/>
+        <activity
+                android:name=".CrudCarreras"
+                android:exported="true"/>
+        <activity
                 android:name=".EditCursoForm"
                 android:exported="true"/>
         <activity
