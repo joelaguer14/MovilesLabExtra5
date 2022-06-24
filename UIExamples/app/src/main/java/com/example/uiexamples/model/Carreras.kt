@@ -62,4 +62,10 @@ class Carreras {
         aux.courseList.add(c)
 
     }
+
+    fun deleteCourse(c: Curso, position: Int){
+        var aux = carreras!!.get(position)
+        aux.courseList.remove(c)
+
+    }
 }

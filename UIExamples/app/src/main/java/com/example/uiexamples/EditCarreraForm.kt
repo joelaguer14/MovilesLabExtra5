@@ -12,7 +12,8 @@ import com.example.uiexamples.model.Cursos
 
 class EditCarreraForm : AppCompatActivity() {
     var codigoCurso = ""
-
+    var codigoCurso2 = ""
+    var carreras: Carreras = Carreras.instance
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_carrera_form)
@@ -22,8 +23,14 @@ class EditCarreraForm : AppCompatActivity() {
         val position = bundle!!.getInt("position")
         val recivedCarrera = bundle.getSerializable("Carrera") as Carrera
 
+
+
         var  cursos_spinner = findViewById(R.id.cursos_spinner) as Spinner
         cursos_spinner.adapter = ArrayAdapter<String> (this,android.R.layout.simple_list_item_1,getCourseList())
+
+
+        var  cursos_spinner2 = findViewById(R.id.cursos_spinner2) as Spinner
+        cursos_spinner2.adapter = ArrayAdapter<String> (this,android.R.layout.simple_list_item_1,CourseToString(carreras.getCarreras().get(position).courseList))
 
         cursos_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -35,6 +42,19 @@ class EditCarreraForm : AppCompatActivity() {
             }
 
         }
+        cursos_spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
+                codigoCurso2 = getCourseList().get(position)
+            }
+
+        }
+
+
+
         val codigo = findViewById<EditText>(R.id.et_codigo)
         val nombre = findViewById<EditText>(R.id.et_nombre)
         val titulo = findViewById<EditText>(R.id.et_titulo)
@@ -42,6 +62,7 @@ class EditCarreraForm : AppCompatActivity() {
 
         val save = findViewById<Button>(R.id.saveButton)
         val add_curso = findViewById<Button>(R.id.btn_addcurso)
+        val delete_curso = findViewById<Button>(R.id.btn_deletecurso)
 
 
 
@@ -63,8 +84,15 @@ class EditCarreraForm : AppCompatActivity() {
 
         add_curso.setOnClickListener{
             var cursos: Cursos = Cursos.instance
-            cursos.getCurso(codigoCurso)?.let { it1 -> carreras.addCourse(it1, position) }
+            cursos.getCurso(codigoCurso)?.let { it1 -> carreras.addCourse(it1, position)  }
             cursos_spinner.setSelection(0)
+
+        }
+        delete_curso.setOnClickListener{
+            var cursos: Cursos = Cursos.instance
+            cursos.getCurso(codigoCurso)?.let { it1 -> carreras.deleteCourse(it1, position) }
+            cursos_spinner2.setSelection(0)
+
         }
 
 
@@ -73,6 +101,14 @@ class EditCarreraForm : AppCompatActivity() {
         var cursos: Cursos = Cursos.instance
         var list: ArrayList<String> = ArrayList()
         cursos.getCursos().forEach{
+            list.add(it.codigo)
+        }
+
+        return list
+    }
+    fun CourseToString(cursoList: ArrayList<Curso>): ArrayList<String>{
+        var list: ArrayList<String> = ArrayList()
+        cursoList.forEach{
             list.add(it.codigo)
         }
 

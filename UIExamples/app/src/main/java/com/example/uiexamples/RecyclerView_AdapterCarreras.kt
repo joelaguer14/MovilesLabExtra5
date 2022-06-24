@@ -1,6 +1,8 @@
 package com.example.uiexamples
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.widget.Button
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uiexamples.model.Carrera
 
@@ -46,7 +49,10 @@ class RecyclerView_AdapterCarreras(private var items: ArrayList<Carrera>): Recyc
 
 
         holder.itemView.findViewById<Button>(R.id.btn_ver_cursos).setOnClickListener{
-            //agregar acá funcionalidad para ver cursos por carrera
+
+            val i = Intent(mcontext, CursosCarrera::class.java)
+            i.putExtra("Carrera",item)
+            mcontext.startActivity(i)
         }
         holder.itemView.setOnClickListener {
             // val intent = Intent(mcontext, MainActivity::class.java)
