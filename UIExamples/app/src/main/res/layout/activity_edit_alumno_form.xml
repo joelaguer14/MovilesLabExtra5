@@ -7,12 +7,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".EditProfesorForm"
+        tools:context=".EditAlumnoForm"
         android:background="@drawable/blue">
     <TextView
             android:layout_width="298dp"
             android:layout_height="wrap_content"
-            android:text="Editar Profesor"
+            android:text="Editar Alumno"
             android:id="@+id/signin"
             android:textColor="#B1B2B4"
             android:textSize="40dp"
@@ -26,8 +26,8 @@
             android:layout_width="match_parent"
             android:layout_below="@+id/signin"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="3dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
             app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -43,8 +43,8 @@
             android:layout_width="match_parent"
             android:layout_below="@+id/tl_annio"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="3dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
             app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -60,8 +60,8 @@
             android:layout_width="match_parent"
             android:layout_below="@+id/tl_numero"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="3dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
             app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -77,8 +77,8 @@
             android:layout_width="match_parent"
             android:layout_below="@+id/tl_fechaInicio"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="3dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
             app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -88,17 +88,33 @@
                 android:inputType="textEmailAddress"
                 android:id="@+id/et_emailProf"/>
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_fechaNac"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tl_fechaFin"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha Nacimiento"
+                android:inputType="date"
+                android:id="@+id/et_fecNac"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:id="@+id/saveButton"
-            android:layout_below="@+id/tl_fechaFin"
+            android:layout_below="@+id/tl_fechaNac"
             android:backgroundTint="#AFAFAF"
             android:layout_centerHorizontal="true"
             android:text="SAVE"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="30dp"

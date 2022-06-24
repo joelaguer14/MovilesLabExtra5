@@ -8,7 +8,7 @@ import android.widget.EditText
 import com.example.uiexamples.model.Profesor
 import com.example.uiexamples.model.Profesores
 
-class EditProfesorForm : AppCompatActivity() {
+class EditAlumnoForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profesor_form)

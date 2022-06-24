@@ -24,18 +24,23 @@
     <activity
             android:id="@+id/nav_carreras"
             android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
-            android:label="Cursos"
+            android:label="Carreras"
             tools:layout="@layout/activity_crud_carreras" />
     <activity
             android:id="@+id/nav_ciclos"
             android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
-            android:label="Cursos"
+            android:label="Ciclos"
             tools:layout="@layout/activity_crud_ciclos" />
     <activity
             android:id="@+id/nav_profesores"
             android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
-            android:label="Cursos"
+            android:label="Profesores"
             tools:layout="@layout/activity_crud_profesores" />
+    <activity
+            android:id="@+id/nav_alumnos"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Alumnos"
+            tools:layout="@layout/activity_crud_alumnos" />
 
     <fragment
         android:id="@+id/nav_logout"
