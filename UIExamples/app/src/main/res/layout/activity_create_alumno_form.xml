@@ -23,9 +23,9 @@
             android:textColor="@color/black"
             android:layout_width="309dp"
             android:layout_height="50dp"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
-            android:id="@+id/textCedulaAlumno"
+            android:id="@+id/et_cedula"
             android:background="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -34,12 +34,11 @@
     <EditText
             android:textColor="@color/black"
             android:background="@color/white"
-
             android:layout_width="309dp"
             android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/textNombreAlumno"
+            android:id="@+id/et_nombre"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +50,7 @@
             android:layout_height="50dp"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/textTelefonoAlumno"
+            android:id="@+id/et_telefono"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +62,7 @@
             android:layout_height="50dp"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/textEmailAlumno"
+            android:id="@+id/et_email"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +74,7 @@
             android:layout_height="50dp"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/textFecNacAlumno"
+            android:id="@+id/et_fechaNac"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,5 +90,31 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.874"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <Spinner
+            android:layout_width="201dp"
+            android:layout_weight="2"
+            android:layout_height="43dp"
+            android:id="@+id/carreras_spinner"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:ems="10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.707"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.757"/>
+    <TextView
+            android:text="Carrera:"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintVertical_bias="0.713"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

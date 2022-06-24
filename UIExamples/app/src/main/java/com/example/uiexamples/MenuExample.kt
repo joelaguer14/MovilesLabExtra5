@@ -102,6 +102,13 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 val i = Intent(this, CrudCursos::class.java)
                 startActivity(i)
             }
+            R.id.nav_alumnos -> {
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                val i = Intent(this, CrudAlumnos::class.java)
+                startActivity(i)
+            }
             R.id.nav_carreras -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona

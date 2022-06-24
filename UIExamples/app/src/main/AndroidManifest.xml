@@ -13,6 +13,9 @@
                 android:name=".CursosCarrera"
                 android:exported="true"/>
         <activity
+                android:name=".CrudAlumnos"
+                android:exported="true"/>
+        <activity
                 android:name=".EditCarreraForm"
                 android:exported="true"/>
         <activity
@@ -23,6 +26,12 @@
                 android:exported="true"/>
         <activity
                 android:name=".EditCursoForm"
+                android:exported="true"/>
+        <activity
+                android:name=".CreateAlumnoForm"
+                android:exported="true"/>
+        <activity
+                android:name=".EditAlumnoForm"
                 android:exported="true"/>
         <activity
                 android:name=".EditProfesorForm"

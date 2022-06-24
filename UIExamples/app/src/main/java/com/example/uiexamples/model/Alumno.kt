@@ -11,7 +11,7 @@ class Alumno: Serializable {
     var fecNac:String=""
     var carrera: Carrera? = null
 
-    internal constructor(cedula:String, nombre:String, telefono:String, email:String, fecNac:String, carrera:Carrera){
+    internal constructor(cedula:String, nombre:String, telefono:String, email:String, fecNac:String, carrera: Carrera?){
         this.cedula=cedula
         this.nombre=nombre
         this.telefono=telefono

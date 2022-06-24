@@ -104,6 +104,7 @@ class CrudCarreras : AppCompatActivity() {
                     i.putExtra("position", position)
                     i.putExtra("Carrera",carrera)
                     startActivity(i)
+                    finish()
 
 
 
