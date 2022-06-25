@@ -1,5 +1,6 @@
 package com.example.uiexamples
 
+import android.app.AlertDialog
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uiexamples.model.Alumno
 import com.example.uiexamples.model.Ciclo
+import com.example.uiexamples.model.Ciclos
+import com.example.uiexamples.model.Matriculas
 
 class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): RecyclerView.Adapter<RecyclerView.ViewHolder>(),
     Filterable {
@@ -36,6 +39,13 @@ class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): Recycle
     override fun getItemCount(): Int {
         return itemsList?.size!!
     }
+    fun showDialog(title : String,Message : String){
+        val builder = AlertDialog.Builder(mcontext)
+        builder.setCancelable(true)
+        builder.setTitle(title)
+        builder.setMessage(Message)
+        builder.show()
+    }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = itemsList?.get(position)
@@ -47,15 +57,32 @@ class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): Recycle
         holder.itemView.findViewById<TextView>(R.id.tv_FecNac)?.text = item?.fecNac
         holder.itemView.findViewById<TextView>(R.id.tv_carrera)?.text = item?.carrera?.nombre
 
-        holder.itemView.findViewById<Button>(R.id.btn_ver_historial).setOnClickListener{
-            //implementar logica para historial
-        }
-        holder.itemView.setOnClickListener {
-            // val intent = Intent(mcontext, MainActivity::class.java)
-            // intent.putExtra("passselectedcountry", itemsList?.get(position))
-            //  mcontext.startActivity(intent)
-            Log.d("Selected:", itemsList?.get(position)?.nombre.toString())
+        holder.itemView.findViewById<Button>(R.id.btn_ver_historial).setOnClickListener {
+            View.OnClickListener {
+                var matriculas: Matriculas = Matriculas.instance
+                var matriculasEstudiante = matriculas.getMatriculasByStudent(item!!.cedula)
 
+                if (matriculasEstudiante.count() == 0) {
+                    showDialog("Error", "No Data Found")
+                    return@OnClickListener
+                }
+
+                val buffer = StringBuffer()
+                matriculasEstudiante.forEach {
+                    buffer.append("Curso :" + it.curso + "\n")
+                    buffer.append("Nota :" + it.nota + "\n\n")
+
+                }
+                showDialog("Data Listing", buffer.toString())
+            }
+            holder.itemView.setOnClickListener {
+
+                // val intent = Intent(mcontext, MainActivity::class.java)
+                // intent.putExtra("passselectedcountry", itemsList?.get(position))
+                //  mcontext.startActivity(intent)
+                Log.d("Selected:", itemsList?.get(position)?.nombre.toString())
+
+            }
         }
     }
 
