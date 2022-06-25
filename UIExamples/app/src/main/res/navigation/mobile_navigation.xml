@@ -41,6 +41,11 @@
             android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
             android:label="Alumnos"
             tools:layout="@layout/activity_crud_alumnos" />
+    <activity
+            android:id="@+id/nav_registroNotas"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Registro Notas"
+            tools:layout="@layout/activity_registro_notas" />
 
     <activity
             android:id="@+id/nav_ofertaAca"

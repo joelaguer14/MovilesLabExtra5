@@ -34,6 +34,10 @@
             android:id="@+id/nav_alumnos"
             android:icon="@drawable/ic_baseline_list"
             android:title="Alumnos" />
+        <item
+                android:id="@+id/nav_registroNotas"
+                android:icon="@drawable/ic_baseline_list"
+                android:title="Registro Notas" />
 
         <item
         android:id="@+id/nav_ofertaAca"
