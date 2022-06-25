@@ -42,6 +42,12 @@
             android:label="Alumnos"
             tools:layout="@layout/activity_crud_alumnos" />
 
+    <activity
+            android:id="@+id/nav_ofertaAca"
+            android:name="com.example.uiexamples.ui.gallery.GalleryFragment"
+            android:label="Oferta Académica"
+            tools:layout="@layout/activity_crud_grupos" />
+
     <fragment
         android:id="@+id/nav_logout"
         android:name="com.example.uiexamples.ui.slideshow.SlideshowFragment"

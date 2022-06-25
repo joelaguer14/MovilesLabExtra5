@@ -10,6 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.UIExamples">
         <activity
+                android:name=".CreateGrupoForm"
+                android:exported="true"/>
+        <activity
+                android:name=".CrudGrupos"
+                android:exported="true"/>
+        <activity
                 android:name=".CursosCarrera"
                 android:exported="true"/>
         <activity

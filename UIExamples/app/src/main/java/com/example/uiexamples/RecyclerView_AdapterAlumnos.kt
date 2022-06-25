@@ -58,13 +58,11 @@ class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): Recycle
         holder.itemView.findViewById<TextView>(R.id.tv_carrera)?.text = item?.carrera?.nombre
 
         holder.itemView.findViewById<Button>(R.id.btn_ver_historial).setOnClickListener {
-            View.OnClickListener {
                 var matriculas: Matriculas = Matriculas.instance
                 var matriculasEstudiante = matriculas.getMatriculasByStudent(item!!.cedula)
 
                 if (matriculasEstudiante.count() == 0) {
                     showDialog("Error", "No Data Found")
-                    return@OnClickListener
                 }
 
                 val buffer = StringBuffer()
@@ -74,7 +72,6 @@ class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): Recycle
 
                 }
                 showDialog("Data Listing", buffer.toString())
-            }
             holder.itemView.setOnClickListener {
 
                 // val intent = Intent(mcontext, MainActivity::class.java)

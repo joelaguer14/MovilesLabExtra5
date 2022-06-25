@@ -117,6 +117,14 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(i)
 
             }
+            R.id.nav_ofertaAca -> {
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                val i = Intent(this, CrudGrupos::class.java)
+                startActivity(i)
+
+            }
             R.id.nav_logout -> {
                 val i = Intent(this, LoginExample::class.java)
                 startActivity(i)
