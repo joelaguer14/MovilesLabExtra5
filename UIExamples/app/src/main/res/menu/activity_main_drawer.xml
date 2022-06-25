@@ -44,10 +44,7 @@
         android:icon="@drawable/ic_baseline_list"
         android:title="Oferta Académica" />
 
-        <item
-                android:id="@+id/nav_job_app"
-                android:icon="@drawable/ic_baseline_profile"
-                android:title="Job Application Info" />
+
         <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_baseline_logout"

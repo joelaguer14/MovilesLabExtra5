@@ -71,7 +71,7 @@ class RecyclerView_AdapterAlumnos(private var items: ArrayList<Alumno>): Recycle
                     buffer.append("Nota :" + it.nota + "\n\n")
 
                 }
-                showDialog("Data Listing", buffer.toString())
+                showDialog("Historial de Cursos", buffer.toString())
             holder.itemView.setOnClickListener {
 
                 // val intent = Intent(mcontext, MainActivity::class.java)

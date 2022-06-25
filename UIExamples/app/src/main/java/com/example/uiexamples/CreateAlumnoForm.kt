@@ -42,6 +42,8 @@ class CreateAlumnoForm : AppCompatActivity() {
 
         save.setOnClickListener {
             var carreras: Carreras = Carreras.instance
+            var personas: Personas = Personas.instance
+
             val carrera = carreras.getCarrera(codigoCarrera)
             val intent = Intent(this, CrudAlumnos::class.java)
             val alumno = Alumno(
@@ -52,6 +54,14 @@ class CreateAlumnoForm : AppCompatActivity() {
                 fecNac = fechaNac.text.toString(),
                 carrera = carrera
             )
+            val persona = Persona(
+                user = name.text.toString(),
+                password = "123",
+                matriculador = false,
+                id = cedula.text.toString(),
+                profile = "Alumno"
+            )
+            personas.addPersona(persona)
             alumnos.addAlumno(alumno)
             startActivity(intent)
             finish()

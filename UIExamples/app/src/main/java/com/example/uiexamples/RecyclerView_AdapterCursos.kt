@@ -24,7 +24,7 @@ class RecyclerView_AdapterCursos(private var items: ArrayList<Curso>): RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val courseListView = LayoutInflater.from(parent.context).inflate(R.layout.template_cursos_2, parent, false)
+        val courseListView = LayoutInflater.from(parent.context).inflate(R.layout.template_cursos, parent, false)
         val sch = PersonHolder(courseListView)
         mcontext = parent.context
         return sch

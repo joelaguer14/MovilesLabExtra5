@@ -67,7 +67,7 @@ class RecyclerView_AdapterGrupos (private var items: ArrayList<Grupo>): Recycler
                 buffer.append("Nota :" + it.nota + "\n\n")
 
             }
-            showDialog("Data Listing", buffer.toString())
+            showDialog("Lista de Alumnos", buffer.toString())
 
         }
     }

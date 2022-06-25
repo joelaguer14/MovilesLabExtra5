@@ -158,23 +158,21 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 finish()
             }
             R.id.nav_registroNotas -> {
-                val i = Intent(this, RegistroNotas::class.java)
-                startActivity(i)
+                val bundle = intent.extras
+                val l = bundle?.getSerializable("Login") as Persona
+
+                if (l.profile == "Profesor") {
+                    val i = Intent(this, RegistroNotas::class.java)
+                    startActivity(i)
+                } else {
+                    Toast.makeText(
+                        this, "Acces denied!!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
 
             }
-//            R.id.nav_job_app -> {
-//                val bundle = intent.extras
-//                val l = bundle?.getSerializable("Login") as Persona
-//                if (l.profile == "viewer") {
-//                val i = Intent(this, JobAppView::class.java)
-//                i.putExtra("Persona",l)
-//                finish()
-//                startActivity(i)
-//                }else{
-//                    Toast.makeText(this, "Acces denied!!",
-//                        Toast.LENGTH_LONG).show();
-//                }
-//            }
+
         }
         return true
     }

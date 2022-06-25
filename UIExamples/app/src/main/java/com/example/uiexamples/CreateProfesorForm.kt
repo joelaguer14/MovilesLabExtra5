@@ -7,10 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.example.uiexamples.model.Curso
-import com.example.uiexamples.model.Cursos
-import com.example.uiexamples.model.Profesor
-import com.example.uiexamples.model.Profesores
+import com.example.uiexamples.model.*
 
 class CreateProfesorForm : AppCompatActivity() {
 
@@ -31,13 +28,22 @@ class CreateProfesorForm : AppCompatActivity() {
 
         save.setOnClickListener {
             val intent = Intent(this, CrudProfesores::class.java)
+            var personas: Personas = Personas.instance
             val profesor = Profesor(
                 cedula = cedula.text.toString(),
                 telefono = telefono.text.toString(),
                 nombre = name.text.toString(),
                 email = email.text.toString()
             )
+            val persona = Persona(
+                user = name.text.toString(),
+                password = "123",
+                matriculador = false,
+                id = cedula.text.toString(),
+                profile = "Profesor"
+            )
             profesores.addProfesor(profesor)
+            personas.addPersona(persona)
             startActivity(intent)
             finish()
         }

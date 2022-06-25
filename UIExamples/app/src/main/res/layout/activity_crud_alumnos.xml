@@ -13,12 +13,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
         <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/Theme.UIExamples.PopupOverlay" />
+        <TextView
+                android:layout_width="298dp"
+                android:layout_height="wrap_content"
+                android:text="Mantenimiento de Alumnos"
+                android:id="@+id/signin"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="10dp" android:layout_marginStart="50dp" android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+        />
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp">
