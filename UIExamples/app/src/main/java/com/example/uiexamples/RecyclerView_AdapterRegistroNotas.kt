@@ -1,18 +1,11 @@
 package com.example.uiexamples
 
-import android.app.AlertDialog
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uiexamples.model.Alumno
 import com.example.uiexamples.model.Matricula
 import com.example.uiexamples.model.Matriculas
 
@@ -50,7 +43,8 @@ class RecyclerView_AdapterRegistroNotas(private var items: ArrayList<Matricula>)
 
         holder.itemView.findViewById<Button>(R.id.btn_actualizaNota).setOnClickListener {
             var matriculas: Matriculas = Matriculas.instance
-            //Implementar logica actializa nota
+            matriculas.actualizaNota(item?.curso,item?.estudiante,holder.itemView.findViewById<EditText>(R.id.et_nota)?.text)
+            Toast.makeText(mcontext, "Registro Actualizado",Toast.LENGTH_LONG).show();
         }
     }
 

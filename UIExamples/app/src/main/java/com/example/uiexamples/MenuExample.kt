@@ -130,6 +130,11 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(i)
                 finish()
             }
+            R.id.nav_registroNotas -> {
+                val i = Intent(this, RegistroNotas::class.java)
+                startActivity(i)
+
+            }
 //            R.id.nav_job_app -> {
 //                val bundle = intent.extras
 //                val l = bundle?.getSerializable("Login") as Persona

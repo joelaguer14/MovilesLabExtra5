@@ -1,20 +1,20 @@
 package com.example.uiexamples.model
 
-import com.example.uiexamples.R
+import android.text.Editable
 
 class Matriculas {
 
     private var matriculas: ArrayList<Matricula> = ArrayList<Matricula>()
 
     init{
-        addMatricula(Matricula("533330954", "EIF160","0"))
-        addMatricula(Matricula("533330954", "EIF160","0"))
-        addMatricula(Matricula("422220544", "EIF255","0"))
-        addMatricula(Matricula("311110568", "EIF255","0"))
-        addMatricula(Matricula("217890147", "EIF255","0"))
-        addMatricula(Matricula("217890147", "EIF450","0"))
-        addMatricula(Matricula("533330954", "EIF450","0"))
-        addMatricula(Matricula("118920994", "EIF300","0"))
+        addMatricula(Matricula("533330954", "EIF160","85"))
+        addMatricula(Matricula("644440875", "EIF160","70"))
+        addMatricula(Matricula("422220544", "EIF255","90"))
+        addMatricula(Matricula("311110568", "EIF255","100"))
+        addMatricula(Matricula("217890147", "EIF255","45"))
+        addMatricula(Matricula("217890147", "EIF450","87"))
+        addMatricula(Matricula("533330954", "EIF450","65"))
+        addMatricula(Matricula("118920994", "EIF300","55"))
 
     }
 
@@ -32,17 +32,18 @@ class Matriculas {
         matriculas?.add(matricula)
     }
 
-    fun getMatriculas(estud: String): Matricula? {
-        for (m: Matricula in matriculas!!){
-            if(m.estudiante.equals(estud)){
-                return m;
-            }
-        }
-        return null;
-    }
 
     fun getMatriculas(): ArrayList<Matricula>{
         return this.matriculas!!
+    }
+    fun actualizaNota(curso:String?, estudiante:String?, nota: Editable?){
+        for (m: Matricula in matriculas!!){
+            if(m.estudiante.equals(estudiante) && m.curso.equals(curso)){
+                if (nota != null) {
+                    m.nota = nota.toString()
+                }
+            }
+        }
     }
 
 
