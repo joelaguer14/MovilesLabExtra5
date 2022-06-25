@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.UIExamples">
         <activity
+                android:name=".RegistroNotas"
+                android:exported="true"/>
+        <activity
                 android:name=".CreateGrupoForm"
                 android:exported="true"/>
         <activity
