@@ -31,7 +31,7 @@ class JobAppView : AppCompatActivity() {
 
 
 
-        tvusername.text = l.nombre
+        tvusername.text = l.user
         tvuserId.text = l.id
 
 

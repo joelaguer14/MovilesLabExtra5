@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -22,11 +23,12 @@ class CreatePersonForm : AppCompatActivity() {
         setContentView(R.layout.activity_create_person_form)
 
         var personas: Personas = Personas.instance
-        val name = findViewById<EditText>(R.id.textName)
+
         val user = findViewById<EditText>(R.id.textUsername)
         val password = findViewById<EditText>(R.id.textPassword)
         val save = findViewById<Button>(R.id.saveButton)
         val id = findViewById<EditText>(R.id.textID)
+        val matriculador= findViewById<CheckBox>(R.id.checkBox)
 
         val profile = findViewById<AutoCompleteTextView>(R.id.TextProfile)
 
@@ -38,10 +40,10 @@ class CreatePersonForm : AppCompatActivity() {
             val person = Persona(
                 user = user.text.toString(),
                 password = password.text.toString(),
-                nombre = name.text.toString(),
+                matriculador = matriculador.isChecked,
                 id = id.text.toString(),
                 profile = profile.text.toString(),
-                foto = R.drawable.foto02
+
             )
             personas.addPersona(person)
             startActivity(intent)
@@ -51,7 +53,7 @@ class CreatePersonForm : AppCompatActivity() {
 
     private fun cargarAutoCompleteTextView() {
         val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.TextProfile)
-        val profiles: Array<String> = arrayOf("admin", "viewer")
+        val profiles: Array<String> = arrayOf("Profesor", "Administrador", "Alumno")
         var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, profiles)
         autoCompleteTextView.threshold = 0
         autoCompleteTextView.setAdapter(adapter)
