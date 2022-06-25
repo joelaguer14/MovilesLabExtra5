@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -74,55 +75,81 @@ class MenuExample : AppCompatActivity(), NavigationView.OnNavigationItemSelected
             R.id.nav_personas -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudPersonas::class.java)
-                startActivity(i)
+                if (l.profile == "Administrador" || l.matriculador) {
+                    val i = Intent(this, CrudPersonas::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
 
             }
             R.id.nav_profesores -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudProfesores::class.java)
-                startActivity(i)
-
+                if (l.profile == "Administrador" || l.matriculador) {
+                    val i = Intent(this, CrudProfesores::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
             }
             R.id.nav_ciclos -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudCiclos::class.java)
-                startActivity(i)
-
+                if (l.profile == "Administrador" || l.matriculador) {
+                    val i = Intent(this, CrudCiclos::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
             }
             R.id.nav_cursos -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudCursos::class.java)
-                startActivity(i)
+                if (l.profile == "Administrador" || l.matriculador) {
+                    val i = Intent(this, CrudCursos::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
             }
             R.id.nav_alumnos -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudAlumnos::class.java)
-                startActivity(i)
+                if (l.profile == "Administrador" || l.matriculador || l.profile=="Alumno") {
+                    val i = Intent(this, CrudAlumnos::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
             }
             R.id.nav_carreras -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudCarreras::class.java)
-                startActivity(i)
+                if (l.profile == "Administrador" || l.matriculador) {
+                    val i = Intent(this, CrudCarreras::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
 
             }
             R.id.nav_ofertaAca -> {
                 val bundle = intent.extras
                 val l = bundle?.getSerializable("Login") as Persona
-
-                val i = Intent(this, CrudGrupos::class.java)
-                startActivity(i)
+                if (l.profile == "Administrador" || l.matriculador || l.profile=="Profesor") {
+                    val i = Intent(this, CrudGrupos::class.java)
+                    startActivity(i)
+                }else{
+                    Toast.makeText(this, "Acces denied!!",
+                        Toast.LENGTH_LONG).show();
+                }
 
             }
             R.id.nav_logout -> {

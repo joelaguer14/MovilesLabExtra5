@@ -42,7 +42,7 @@ class CreatePersonForm : AppCompatActivity() {
                 password = password.text.toString(),
                 matriculador = matriculador.isChecked,
                 id = id.text.toString(),
-                profile = profile.text.toString(),
+                profile = profile.text.toString()
 
             )
             personas.addPersona(person)

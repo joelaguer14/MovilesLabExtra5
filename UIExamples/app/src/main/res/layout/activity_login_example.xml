@@ -61,33 +61,6 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="30dp"
     />
-    <CheckedTextView
-            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-            android:text="Change password"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_submit"
-            android:id="@+id/changePasswordChecked"
-            android:layout_centerHorizontal="true"
-            android:textAlignment="center"
-
-    />
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textRegister"
-            android:layout_below="@+id/changePasswordChecked"
-            android:text="Don't Have an Account ?"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"/>
 
 
 </RelativeLayout>
