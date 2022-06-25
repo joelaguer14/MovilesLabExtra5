@@ -5,23 +5,19 @@ import java.io.Serializable
 
 class Persona : Serializable {
 
-    var user:String = ""
-    var password:String = ""
-    var nombre:String = ""
-    var foto:Int = 0
-    var id:String=""
-
-    var profile:String=""
+    var user: String = ""
+    var password: String = ""
+    var id: String = ""
+    var matriculador: Boolean = true
+    var profile: String = ""
 
 
-
-    internal constructor(user:String, password:String, nombre:String,id:String,profile:String, foto:Int){
+    internal constructor(user: String, password: String, matriculador: Boolean, id: String, profile: String) {
         this.user = user
         this.password = password
-        this.nombre = nombre
-        this.foto = foto
-        this.id=id
-        this.profile=profile
+        this.matriculador = matriculador
+        this.id = id
+        this.profile = profile
 
     }
 

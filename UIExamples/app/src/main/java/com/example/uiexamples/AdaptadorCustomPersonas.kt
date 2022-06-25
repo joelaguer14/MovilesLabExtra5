@@ -35,14 +35,16 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = itemsList?.get(position)
-        holder.itemView.findViewById<TextView>(R.id.tvNombre)?.text = item?.nombre
-        holder.itemView.findViewById<ImageView>(R.id.ivFoto).setImageResource(item?.foto!!)
+        holder.itemView.findViewById<TextView>(R.id.tv_user)?.text = item?.user
+        holder.itemView.findViewById<TextView>(R.id.tv_id)?.text = item?.id
+        holder.itemView.findViewById<TextView>(R.id.tv_perfil)?.text = item?.profile
+        holder.itemView.findViewById<TextView>(R.id.tv_matriculador)?.text = item?.matriculador.toString()
 
         holder.itemView.setOnClickListener {
            // val intent = Intent(mcontext, MainActivity::class.java)
            // intent.putExtra("passselectedcountry", itemsList?.get(position))
           //  mcontext.startActivity(intent)
-            Log.d("Selected:", itemsList?.get(position)?.nombre.toString())
+            Log.d("Selected:", itemsList?.get(position)?.user.toString())
 
         }
     }
@@ -57,7 +59,7 @@ class RecyclerView_Adapter(private var items: ArrayList<Persona>): RecyclerView.
                 } else {
                     val resultList = ArrayList<Persona>()
                     for (row in items) {
-                        if (row.nombre.toLowerCase().contains(charSearch.toLowerCase())) {
+                        if (row.user.toLowerCase().contains(charSearch.toLowerCase())) {
                             resultList.add(row)
                         }
                     }

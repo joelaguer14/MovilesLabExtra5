@@ -22,14 +22,14 @@ class JobAppEditForm : AppCompatActivity() {
 
 
 
-        name.setText(recivedPerson.nombre)
+        name.setText(recivedPerson.user)
         id.setText(recivedPerson.id)
 
 
 
         save.setOnClickListener{
 
-            recivedPerson.nombre = name.text.toString()
+            recivedPerson.user = name.text.toString()
             recivedPerson.id = id.text.toString()
 
             personas.editPerson(recivedPerson,position)

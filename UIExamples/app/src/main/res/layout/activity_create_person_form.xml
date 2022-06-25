@@ -21,18 +21,6 @@
             app:layout_constraintVertical_bias="0.026"/>
     <EditText
             android:textColor="@color/black"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/textName"
-            android:background="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.121" android:hint="Name..."/>
-    <EditText
-            android:textColor="@color/black"
             android:background="@color/white"
 
             android:layout_width="309dp"
@@ -43,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.555" android:hint="ID..."/>
+            app:layout_constraintVertical_bias="0.454" android:hint="ID..."/>
     <EditText
             android:background="@color/white"
             android:textColor="@color/black"
@@ -55,7 +43,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.264" android:hint="Username..."/>
+            app:layout_constraintVertical_bias="0.193" android:hint="Username..."/>
     <EditText
             android:background="@color/white"
             android:textColor="@color/black"
@@ -67,7 +55,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.418" android:hint="Password..."/>
+            app:layout_constraintVertical_bias="0.326" android:hint="Password..."/>
     <Button
 
             android:backgroundTint="#AFAFAF"
@@ -90,5 +78,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.714"/>
+            app:layout_constraintVertical_bias="0.587"/>
+    <CheckBox
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="Matriculador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/checkBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.725"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
